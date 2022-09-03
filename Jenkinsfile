@@ -1,5 +1,4 @@
 pipeline {
-<<<<<<< HEAD
     agent { docker { image 'python:3.10.1-alpine' } }
     stages {
         stage('Build') {
@@ -17,5 +16,5 @@ pipeline {
             sh 'echo \'Deploying\''
           }
         }
-  }
+    }
 }
