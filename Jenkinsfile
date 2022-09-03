@@ -1,13 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'python:2-alpine' 
-    }
-  }
+  agent { docker { image 'python:3.10.1-alpine' } }
   stages {
     stage('Build') {
       steps {
-        sh '''python time.py'''
+        sh 'python --version'
+        sh 'python time.py'
       }
     }
 
