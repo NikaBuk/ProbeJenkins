@@ -1,13 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'python:2-alpine' 
+    }
+  }
   stages {
     stage('Build') {
-      agent {
-        docker {
-          image 'python:2-alpine' 
-        }
-      }
-    
       steps {
         sh '''python time.py'''
       }
